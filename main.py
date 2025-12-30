@@ -1,6 +1,6 @@
 def pin_extractor(poems):
+    secret_codes = []
     for poem in poems:
-    
         secret_code = ''
         lines = poem.split('\n')
         for line_index, line in enumerate(lines):
@@ -9,8 +9,8 @@ def pin_extractor(poems):
                 secret_code += str(len(words[line_index]))
             else:
                 secret_code += '0'
-        return secret_code
-
+        secret_codes.append(secret_code)
+        
 poem = """Stars and the moon
 shine in the sky
 white and
